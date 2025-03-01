@@ -1,0 +1,22 @@
+# name: Deploy Ferryman
+# on:
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v3
+
+#       - name: Zip function
+#         run: zip -r ferryman.zip .
+
+#         #todo: set up login credentials
+#         #todo: I don't think this action is right...
+#       - name: Deploy to AWS Lambda
+#         uses: aws-actions/aws-cli-action@v2
+#         with:
+#           command: lambda update-function-code --function-name Ferryman --zip-file fileb://ferryman.zip
